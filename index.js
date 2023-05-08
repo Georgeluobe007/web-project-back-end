@@ -22,6 +22,8 @@ const UserAuth = require("./TableCodes/UserAuthCodes");
 app.use("/user",UserAuth);
 const UserEdit = require("./TableCodes/EditProfile");
 app.use("/editProfile",UserEdit);
+const Post = require("./TableCodes/Post");
+app.use("/UserPost",Post);
 database.sequelize.sync().then(() => {
     app.listen(3002, () => {
         console.log("app is reunning on port 3002");
